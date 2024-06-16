@@ -1,0 +1,8 @@
+tkinter for application?
+Sequential Neural Network
+tensorflow.keras
+
+key terms ->
+adam optimizer
+cross entropy loss function
+relu and softmax activation function

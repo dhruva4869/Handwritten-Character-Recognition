@@ -1,0 +1,56 @@
+Key Terms : 
+Neural networks are basically made of neurons
+These neurons simply store a value between 0 to 1 corresponding the the gray scale
+This means a value of 1.0 = WHITE pixel/filled pixel
+The Sequential model is a linear stack of layers.
+
+Now we need Activation functions for 
+=> Speeding up the learning
+=> Improving learning accuracy by adding non-linearity to the data
+=> Simple data -> linear -> will fail in the test data so we need Activation functions
+=> We mainly use tf.keras.layers.Flatten first to generate the 1st layer or input layer
+=> Then we use tf.keras.layers.Dense with relu Activation function
+
+Loss function is simply to check how accurate the model is performing.
+Our major task is obviously going to reduce this Loss Function as much as possible
+Now loss functions can be squared like the L2 Loss (tries to fit outliers forcefully) or 
+Linear (works well with outliers meaning doesnt try to fit them)
+
+
+
+Optimizers => used for minimizing the loss function
+=> Improve the overall training speed as well by a LOT
+
+
+Types of Optimizers:
+
+=> Gradient Descent 
+    -> Iterative
+    -> Small steps one by one. Not accuarate, does big jumps and skips minima
+
+=> SGD
+    -> Batches + GD
+
+=> Batch GD
+    -> One HUGE Batch
+
+=> SGD with momentum/accelerators
+    -> Past experiences + extra speed
+    -> Faster training
+    -> Better iterations
+    -> Can control the acceleration and movement very easily
+
+=> Adagrad
+    -> SGD is good but what about controlling the rate of learning and loss functions in multiple directions?
+    -> Adagrad does exactly this.
+    -> Controls the overall rate of learning and optimization in different directions
+    -> Very aggressive however sufers from the learning rate problem, meaning that after a few time the learning rate approx = 0
+
+=> Adadelta
+    -> Adagrad with gamma weights added to make sure that the learning rate != 0
+
+=> Adam 
+    -> Adadelta/Adagrad with momentum
+
+
+CV2 used here just for getting and displaying the 28x28 image after conversion
